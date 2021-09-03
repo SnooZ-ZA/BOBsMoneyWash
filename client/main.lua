@@ -72,7 +72,9 @@ end)
 RegisterNetEvent('esx_blackmoney:success')
 AddEventHandler('esx_blackmoney:success', function (source)	
 ESX.ShowNotification('1 Small Load Token = $1000!')
-		searching  = true
+		playerPed = PlayerPedId()
+		SetEntityHeading(playerPed, 97.37)
+		searching  = true		
 		exports.rprogress:Custom({
 								Async = true,
 								x = 0.5,
@@ -91,8 +93,8 @@ ESX.ShowNotification('1 Small Load Token = $1000!')
 								BGColor = "rgba(107, 109, 110, 0.95)",
 								Animation = {
 								--scenario = "CODE_HUMAN_MEDIC_TEND_TO_DEAD", -- https://pastebin.com/6mrYTdQv
-								animationDictionary = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", -- https://alexguirre.github.io/animations-list/
-								animationName = "machinic_loop_mechandplayer",
+								animationDictionary = "amb@prop_human_parking_meter@male@idle_a", -- https://alexguirre.github.io/animations-list/
+								animationName = "idle_a",
 								},
 								DisableControls = {
 								Mouse = false,
@@ -109,6 +111,8 @@ end)
 RegisterNetEvent('esx_blackmoney:success2')
 AddEventHandler('esx_blackmoney:success2', function (source)	
 ESX.ShowNotification('1 Large Load Token = $5000!')
+		playerPed = PlayerPedId()
+		SetEntityHeading(playerPed, 97.37)
 		searching  = true
 		exports.rprogress:Custom({
 								Async = true,
@@ -128,8 +132,8 @@ ESX.ShowNotification('1 Large Load Token = $5000!')
 								BGColor = "rgba(107, 109, 110, 0.95)",
 								Animation = {
 								--scenario = "CODE_HUMAN_MEDIC_TEND_TO_DEAD", -- https://pastebin.com/6mrYTdQv
-								animationDictionary = "anim@amb@clubhouse@tutorial@bkr_tut_ig3@", -- https://alexguirre.github.io/animations-list/
-								animationName = "machinic_loop_mechandplayer",
+								animationDictionary = "amb@prop_human_parking_meter@male@idle_a", -- https://alexguirre.github.io/animations-list/
+								animationName = "idle_a",
 								},
 								DisableControls = {
 								Mouse = false,
