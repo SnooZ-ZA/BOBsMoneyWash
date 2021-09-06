@@ -53,7 +53,7 @@ Citizen.CreateThread(function()
 
         for k in pairs(place) do
 
-            local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
+            local plyCoords = GetEntityCoords(PlayerPedId(), false)
             local placedist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, place[k].x, place[k].y, place[k].z)
 
             if placedist <= 1.5 then
@@ -153,7 +153,7 @@ Citizen.CreateThread(function()
 
         for k in pairs(token) do
 
-            local plyCoords = GetEntityCoords(GetPlayerPed(-1), false)
+            local plyCoords = GetEntityCoords(PlayerPedId(), false)
             local tokendist = Vdist(plyCoords.x, plyCoords.y, plyCoords.z, token[k].x, token[k].y, token[k].z)
 
             if tokendist <= 1.5 then
